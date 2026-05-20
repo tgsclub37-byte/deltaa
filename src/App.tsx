@@ -54,9 +54,6 @@ export default function App() {
       >
         {/* Header Section */}
         <motion.div variants={itemVariants} className="mb-6 md:mb-8">
-          <span className="text-xs uppercase tracking-[0.25em] text-emerald-400 font-bold block mb-2">
-            Play & Win
-          </span>
           <h1 className="text-3xl md:text-4xl font-black font-roboto-slab leading-tight">
             <span className="text-white block mb-1">WELCOME TO</span>
             <span className="gold-text-gradient font-extrabold tracking-wide drop-shadow-md">
