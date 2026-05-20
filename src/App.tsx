@@ -55,12 +55,12 @@ export default function App() {
         {/* Header Section */}
         <motion.div variants={itemVariants} className="mb-6 md:mb-8">
           <span className="text-xs uppercase tracking-[0.25em] text-emerald-400 font-bold block mb-2">
-            Grow Your Business
+            Play & Win
           </span>
           <h1 className="text-3xl md:text-4xl font-black font-roboto-slab leading-tight">
             <span className="text-white block mb-1">WELCOME TO</span>
             <span className="gold-text-gradient font-extrabold tracking-wide drop-shadow-md">
-              DELTA 999 MARKETING
+              INDIA'S BIGGEST SPORTS COMMUNITY
             </span>
           </h1>
         </motion.div>
@@ -73,7 +73,7 @@ export default function App() {
           <div className="absolute inset-0 rounded-full bg-emerald-500/20 blur-md group-hover:bg-emerald-500/30 transition-all duration-300 pointer-events-none" />
           <img 
             src="/delta_999_logo.png" 
-            alt="Delta 999 Marketing Logo" 
+            alt="Delta 999 Logo" 
             className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-full border border-emerald-500/30 bg-black/40 p-2 shadow-2xl relative float-slow"
           />
         </motion.div>
@@ -101,17 +101,17 @@ export default function App() {
         >
           <div className="flex flex-col gap-5 text-center">
             <h2 className="text-lg md:text-xl font-bold text-white flex items-center justify-center gap-2 leading-relaxed">
-              <span className="text-2xl">📈</span>
-              <span>Turn clicks into customers with Google & Meta Ads!</span>
+              <span className="text-2xl">🏆</span>
+              <span>Join the ultimate arena of sports and gaming entertainment!</span>
             </h2>
             
             <p className="text-gray-300 text-sm md:text-base font-medium leading-relaxed max-w-md mx-auto">
-              Strategic targeting, high-converting creatives, and performance optimization to boost your sales.
+              Experience real-time sports updates, expert game insights, and a highly secure environment built for true sports fans.
             </p>
             
             <div className="pt-2">
               <span className="text-lg md:text-xl font-black tracking-wide gold-text-gradient uppercase animate-pulse">
-                Start your growth journey now!
+                Start your winning streak now!
               </span>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function App() {
             Terms of Service
           </button>
         </div>
-        <p className="mb-2">© {new Date().getFullYear()} Delta 999 Marketing. All rights reserved.</p>
+        <p className="mb-2">© {new Date().getFullYear()} Delta 999. All rights reserved.</p>
         <p className="text-[10px] text-gray-600">
           This site is not a part of Google or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Google or Meta in any way.
         </p>
@@ -199,7 +199,7 @@ export default function App() {
               
               <div className="space-y-4 text-sm text-gray-300 leading-relaxed text-left">
                 <p>
-                  At Delta 999 Marketing, we value and respect your privacy. This Privacy Policy details how we handle information when you visit our landing page.
+                  At Delta 999, we value and respect your privacy. This Privacy Policy details how we handle information when you visit our landing page.
                 </p>
                 
                 <h3 className="font-bold text-white text-base">1. Information Collection</h3>
@@ -255,7 +255,7 @@ export default function App() {
               
               <div className="space-y-4 text-sm text-gray-300 leading-relaxed text-left">
                 <p>
-                  Welcome to Delta 999 Marketing. By browsing and using this website, you agree to comply with and be bound by the following Terms of Service.
+                  Welcome to Delta 999. By browsing and using this website, you agree to comply with and be bound by the following Terms of Service.
                 </p>
                 
                 <h3 className="font-bold text-white text-base">1. Age Requirement</h3>
@@ -280,7 +280,7 @@ export default function App() {
                 
                 <h3 className="font-bold text-white text-base">5. Intellectual Property</h3>
                 <p>
-                  The logo, design components, and custom layouts are the intellectual property of Delta 999 Marketing. Unauthorized copying or redistribution is prohibited.
+                  The logo, design components, and custom layouts are the intellectual property of Delta 999. Unauthorized copying or redistribution is prohibited.
                 </p>
               </div>
             </motion.div>
