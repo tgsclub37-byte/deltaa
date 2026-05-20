@@ -5,46 +5,44 @@
 }
 
 body {
-  background-color: #050510;
+  background-color: #020603;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  color: #f3f4f6;
 }
 
-.font-orbitron {
-  font-family: 'Orbitron', sans-serif;
+/* Font helper classes */
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
 }
 
-.font-rajdhani {
-  font-family: 'Rajdhani', sans-serif;
+.font-roboto-slab {
+  font-family: 'Roboto Slab', serif;
 }
 
-/* Glowing text effect */
-.glow-cyan {
-  text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 40px #00f5ff;
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.glow-purple {
-  text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7, 0 0 40px #a855f7;
+/* Smooth custom scrollbar matching theme */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.glow-orange {
-  text-shadow: 0 0 10px #f97316, 0 0 20px #f97316;
+::-webkit-scrollbar-track {
+  background: #020603;
 }
 
-/* Neon border */
-.neon-border-cyan {
-  box-shadow: 0 0 5px #00f5ff, 0 0 15px #00f5ff33, inset 0 0 5px #00f5ff22;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #10b981, #047857);
+  border-radius: 4px;
 }
 
-.neon-border-purple {
-  box-shadow: 0 0 5px #a855f7, 0 0 15px #a855f733, inset 0 0 5px #a855f722;
-}
-
-/* Animated gradient background */
-.animated-gradient {
-  background: linear-gradient(135deg, #050510 0%, #0a0520 25%, #050515 50%, #0a0525 75%, #050510 100%);
+/* Animated gradient background with emerald/forest/charcoal colors */
+.marketing-gradient {
+  background: linear-gradient(135deg, #020603 0%, #05140b 35%, #020804 70%, #081c10 100%);
   background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
+  animation: gradientShift 15s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -53,151 +51,61 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Cyber grid */
-.cyber-grid {
-  background-image: 
-    linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+/* Glassmorphism panel styling */
+.glass-panel {
+  background: rgba(10, 25, 15, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* Scan line effect */
-.scanlines::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.1) 2px,
-    rgba(0, 0, 0, 0.1) 4px
-  );
-  pointer-events: none;
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Clip path for cards */
-.clip-card {
-  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+.glass-panel-hover:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.1), inset 0 0 12px rgba(16, 185, 129, 0.05);
+  transform: translateY(-2px);
 }
 
-.clip-btn {
-  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-}
-
-/* Hover glow button */
-.btn-glow-cyan {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.btn-glow-cyan::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #00f5ff22, #a855f722);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.btn-glow-cyan:hover::before {
-  opacity: 1;
-}
-
-.btn-glow-cyan:hover {
-  box-shadow: 0 0 20px #00f5ff55, 0 0 40px #00f5ff22;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #050510;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(#00f5ff, #a855f7);
-  border-radius: 3px;
-}
-
-/* Floating animation */
+/* Floating animation for graphic images */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-10px); }
 }
 
-.float-animation {
-  animation: float 4s ease-in-out infinite;
+.float-slow {
+  animation: float 6s ease-in-out infinite;
 }
 
-/* Pulse glow */
-@keyframes pulseGlow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+/* WhatsApp Green Pulsing Glow */
+@keyframes greenPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.6), 0 0 45px rgba(34, 197, 94, 0.3);
+  }
 }
 
-.pulse-glow {
-  animation: pulseGlow 2s ease-in-out infinite;
+.whatsapp-glow {
+  animation: greenPulse 2.5s infinite;
 }
 
-/* Particle dot */
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-/* Number counter style */
-.stat-number {
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #00f5ff, #a855f7);
+/* Gold Gradient text styling */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Card hover */
-.game-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.game-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-/* Diagonal stripe */
-.diagonal-stripe {
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(0, 245, 255, 0.02) 10px,
-    rgba(0, 245, 255, 0.02) 20px
-  );
-}
-
-/* Progress bar animation */
-@keyframes progressFill {
-  from { width: 0%; }
-  to { width: var(--target-width); }
-}
-
-.progress-bar {
-  animation: progressFill 1.5s ease forwards;
-}
-
-/* Glitch effect */
-@keyframes glitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(-1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-}
-
-.glitch:hover {
-  animation: glitch 0.3s ease infinite;
+/* Green Emerald Text Gradient */
+.emerald-text-gradient {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
